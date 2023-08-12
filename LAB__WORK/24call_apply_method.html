@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const students = {
+        fname: "Ravirajsinh",
+        lname: "Parmar",
+        fullname: function () {
+          return this.fname + " " + this.lname;
+        },
+      };
+
+      const students1 = {
+        fname: "Jaymin",
+        lname: "Khodifad",
+      };
+
+      const students2 = {
+        fname: "Ashish",
+        lname: "Sarvaiya",
+      };
+
+      //   document.write(students.fullname());
+
+      //   document.write("<br>");
+
+      //   document.write(students.fullname.call(students1));
+
+      //   ---------------------------------------
+
+      // ===> Apply Method :- Apply Method ye Same Call Method jevi j chhe. But Call() Mthod ma Argument Separately Pass Thay Chhe Jyare Apply() Method ma Argument Array ma Pass thay chhe.
+
+      const Developer = {
+        fname: "Ravirajsinh",
+        lname: "Parmar",
+        info: function (position, language) {
+          return ` ${this.fname} ${this.lname} is a ${position} Developer in ${language} Language.`;
+        },
+      };
+
+      const Developer1 = {
+        fname: "Jaymin",
+        lname: "Khodifad",
+      };
+
+      //   document.write(Developer.info("Full Stack", "php"));
+
+      //   document.write("<br>");
+
+      //   document.write(Developer.info.call(Developer1, "Full Stack", "php"));
+
+      document.write(Developer.info.apply(Developer1, ["Full Stack", "php"]));
+    </script>
+  </body>
+</html>

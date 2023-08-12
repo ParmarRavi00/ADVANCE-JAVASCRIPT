@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ===> Bind Method ye 1 Object And 1 Function ne Ek New Function Store kare chhe.
+
+      const Details = {
+        fname: "Ravirajsinh",
+        lname: "Parmar",
+        fullname: function () {
+          console.log(` ${this.fname} ${this.lname}`);
+        },
+      };
+
+      //   Details.fullname();
+
+      //   Details.fullname.bind(Details)();
+
+      let Details1 = Details.fullname.bind(Details);
+
+      //   Details1();
+
+      //   -----------------------------------------------------
+
+      const Person1 = {
+        fname: "Ravirajsinh",
+        lname: "Parmar",
+      };
+
+      const Person2 = {
+        fname: "Jaymin",
+        lname: "Khodifad",
+      };
+
+      const Person3 = {
+        fname: "Vishal",
+        lname: "Sarvaiya",
+      };
+
+      function Fullname(position) {
+        console.log(`${this.fname} ${this.lname} is a ${position} Developer`);
+      }
+
+      let user1 = Fullname.bind(Person1);
+
+      user1("Full Stack");
+
+      let user2 = Fullname.bind(Person2);
+
+      user2("Front-end");
+
+      let user3 = Fullname.bind(Person3);
+
+      user3("Back-end");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="b1">Get Text</button>
+
+    <button id="b2">Get JSON</button>
+
+    <button id="b3">Get API</button>
+
+    <b id="op"></b>
+
+    <script>
+      let btn1 = document.getElementById("b1");
+
+      let btn2 = document.getElementById("b2");
+
+      let btn3 = document.getElementById("b3");
+
+      btn1.addEventListener("click", GetText);
+
+      btn2.addEventListener("click", GetJSON);
+
+      btn3.addEventListener("click", GetAPI);
+
+      function GetText() {
+        fetch("semple.txt")
+          .then((res) => {
+            return res.text();
+          })
+          .then((print) => {
+            document.getElementById("op").innerHTML = print;
+          });
+      }
+
+      //   ------------------------------------------
+
+      function GetJSON() {
+        fetch("semple.json")
+          .then((res) => {
+            return res.json();
+          })
+          .then((print) => {
+            Result = "<h1>Users Data</h1>";
+
+            print.forEach((obj) => {
+              Result += `
+                
+                <ul>
+                    <li>${obj.id}</li>
+                    <li>${obj.name}</li>
+                    <li>${obj.email}</li>
+                </ul>
+                `;
+            });
+
+            document.getElementById("op").innerHTML = Result;
+          });
+      }
+
+      //   ------------------------------------------
+
+      function GetAPI() {
+        fetch("https://jsonplaceholder.typicode.com/todos/1")
+          .then((res) => {
+            return res.json();
+          })
+          .then((print) => {
+            Result = "<p> API Details </p>";
+
+            Result += `
+            <ul>
+                <li>${print.userId} </li>
+                <li>${print.id} </li>
+                <li>${print.title} </li>
+                <li>${print.completed} </li>
+            </ul>
+            `;
+
+            document.getElementById("op").innerHTML = Result;
+          });
+      }
+    </script>
+  </body>
+</html>

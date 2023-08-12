@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const any = [2, 5, 7, 9];
+
+      const calArea = function (x) {
+        var abc = Math.PI * x * x;
+
+        return abc;
+      };
+
+      const cal = function (any, arr) {
+        const output = [];
+
+        for (let i = 0; i < any.length; i++) {
+          output.push(arr(any[i]));
+        }
+        return output;
+      };
+
+      // console.log(cal(any, calArea));
+
+      //   ------------------Diameter---------------------
+
+      const calDiameter = function (y) {
+        return 2 * y;
+      };
+
+      // ==> Jyare Multiple Function Bhega mali OUTPUT aape te ne HOF kahe chhe
+
+      console.log(cal(any, calDiameter));
+    </script>
+  </body>
+</html>

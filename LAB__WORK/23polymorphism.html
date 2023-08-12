@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ===> Polymorphism :- OOPS ma Polymorphism na use thi 1 j OPERATION ne ALAG - ALAG rite kari shakay chhe.
+
+      class Animal {
+        speak() {
+          console.log("Hello Everyone...!");
+        }
+      }
+
+      class Cat extends Animal {}
+
+      class Dog extends Animal {}
+
+      let animal = new Animal();
+      let cat = new Cat();
+      let dog = new Dog();
+
+      animal.speak();
+      cat.speak();
+      dog.speak();
+    </script>
+  </body>
+</html>

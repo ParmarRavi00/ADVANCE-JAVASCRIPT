@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var student = [
+        {
+          name: "Vishal",
+          physics: 63,
+          maths: 78,
+          chemistry: 56,
+          computer: 89,
+          total: function final() {
+            var totalMarks =
+              this.physics + this.maths + this.chemistry + this.computer;
+            return totalMarks;
+          },
+          percentage: function per() {
+            var perResult =
+              this.physics + this.maths + this.chemistry + this.computer;
+
+            var divaid = perResult / 4;
+
+            return divaid;
+          },
+        },
+
+        {
+          name: "Alpesh",
+          physics: 53,
+          maths: 60,
+          chemistry: 81,
+          computer: 73,
+          total: function final() {
+            var totalMarks =
+              this.physics + this.maths + this.chemistry + this.computer;
+            return totalMarks;
+          },
+          percentage: function per() {
+            var perResult =
+              this.physics + this.maths + this.chemistry + this.computer;
+
+            var divaid = perResult / 4;
+
+            return divaid;
+          },
+        },
+
+        {
+          name: "Ashish",
+          physics: 55,
+          maths: 61,
+          chemistry: 52,
+          computer: 77,
+          total: function final() {
+            var totalMarks =
+              this.physics + this.maths + this.chemistry + this.computer;
+            return totalMarks;
+          },
+          percentage: function per() {
+            var perResult =
+              this.physics + this.maths + this.chemistry + this.computer;
+
+            var divaid = perResult / 4;
+
+            return divaid;
+          },
+        },
+
+        {
+          name: "Jaymin",
+          physics: 48,
+          maths: 78,
+          chemistry: 54,
+          computer: 61,
+          total: function final() {
+            var totalMarks =
+              this.physics + this.maths + this.chemistry + this.computer;
+            return totalMarks;
+          },
+          percentage: function per() {
+            var perResult =
+              this.physics + this.maths + this.chemistry + this.computer;
+
+            var divaid = perResult / 4;
+
+            return divaid;
+          },
+        },
+      ];
+
+      for (var i = 0; i < student.length; i++) {
+        document.write(
+          "Name : " +
+            student[i].name +
+            "<br>" +
+            "Physics : " +
+            student[i].physics +
+            "<br>" +
+            "Maths : " +
+            student[i].maths +
+            "<br>" +
+            "Chemistry : " +
+            student[i].chemistry +
+            "<br>" +
+            "Computer : " +
+            student[i].computer +
+            "<br>" +
+            "Total : " +
+            student[i].total() +
+            "<br>" +
+            "Percentage : " +
+            student[i].percentage() +
+            "<br>" +
+            "<br>" +
+            "--------------------" +
+            "<br>" +
+            "<br>"
+        );
+      }
+    </script>
+  </body>
+</html>
